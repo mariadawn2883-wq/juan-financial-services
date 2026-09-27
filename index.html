@@ -1,534 +1,597 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Juan Igurtua | Financial Services</title>
-
-  <style>
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: #090807;
-      color: #f3eadf;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 60px 7%;
-      background:
-        radial-gradient(
-          circle at 80% 20%,
-          rgba(137, 96, 55, 0.18),
-          transparent 35%
-        ),
-        linear-gradient(
-          135deg,
-          #090807 0%,
-          #1b130e 55%,
-          #0b0908 100%
-        );
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1150px;
-      margin: auto;
-
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 70px;
-
-      align-items: center;
-    }
-
-    /* =========================
-       LOGO
-    ========================= */
-
-    .logo {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 65px;
-      font-weight: bold;
-      color: #c9a36a;
-      line-height: 1;
-      margin-bottom: 12px;
-    }
-
-    .brand-name {
-      color: #e8d8c4;
-      font-size: 13px;
-      letter-spacing: 4px;
-      font-weight: bold;
-      margin-bottom: 35px;
-    }
-
-    /* =========================
-       HERO TEXT
-    ========================= */
-
-    .eyebrow {
-      color: #c9a36a;
-      font-size: 11px;
-      letter-spacing: 4px;
-      margin-bottom: 22px;
-    }
-
-    h1 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(58px, 8vw, 92px);
-      line-height: 0.9;
-      letter-spacing: -3px;
-      margin-bottom: 28px;
-    }
-
-    h1 span {
-      color: #c9a36a;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Juan Igurtua | Financial Services</title>
+
+<style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #090807;
+  color: #f1e8dc;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 100vh;
+  padding: 60px 7%;
+  display: flex;
+  align-items: center;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(160,110,60,.15),
+      transparent 35%
+    ),
+    linear-gradient(135deg,#090807,#21160f);
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.logo {
+  font-family: Georgia, serif;
+  font-size: 65px;
+  font-weight: bold;
+  color: #c9a36a;
+  line-height: 1;
+}
+
+.brand {
+  color: #d8c6b1;
+  font-size: 12px;
+  letter-spacing: 4px;
+  margin: 12px 0 35px;
+}
+
+.eyebrow {
+  color: #c9a36a;
+  font-size: 11px;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(55px,8vw,90px);
+  line-height: .9;
+  letter-spacing: -3px;
+  margin-bottom: 28px;
+}
+
+h1 span,
+.gold {
+  color: #c9a36a;
+}
+
+.intro {
+  max-width: 500px;
+  color: #b8aea4;
+  font-size: 18px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 16px 32px;
+
+  background: #c9a36a;
+  color: #100d0a;
 
-    .intro {
-      max-width: 510px;
-      color: #b8aea4;
-      font-size: 18px;
-      line-height: 1.7;
-    }
+  text-decoration: none;
+  border: none;
+
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #e2c187;
+}
+
+/* =========================
+   PHOTO
+========================= */
+
+.photo {
+  max-width: 450px;
+  margin: auto;
+
+  padding: 8px;
+
+  border: 1px solid #c9a36a;
+
+  background: #120e0b;
+
+  box-shadow: 0 25px 70px rgba(0,0,0,.6);
+}
+
+.photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* =========================
+   WHY JOIN
+========================= */
+
+.section {
+  padding: 90px 7%;
+  background: #15110e;
+  text-align: center;
+}
+
+.section h2 {
+  font-family: Georgia, serif;
+  font-size: 48px;
+  margin-bottom: 50px;
+}
+
+.cards {
+  max-width: 1050px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
+
+.card {
+  padding: 35px 25px;
+
+  background: #1d1713;
+  border: 1px solid #433329;
+
+  text-align: left;
+}
+
+.card-number {
+  color: #c9a36a;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.card h3 {
+  margin: 15px 0 10px;
+
+  font-family: Georgia, serif;
+  font-size: 25px;
+}
+
+.card p {
+  color: #a99f95;
+}
+
+/* =========================
+   OPPORTUNITY
+========================= */
+
+.opportunity {
+  padding: 100px 7%;
+  text-align: center;
+  background: #0c0a09;
+}
 
-    /* =========================
-       BUTTON
-    ========================= */
+.opportunity h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(40px,6vw,60px);
+  margin-bottom: 20px;
+}
+
+.opportunity p {
+  max-width: 650px;
+  margin: auto;
+  color: #aaa095;
+  font-size: 17px;
+}
+
+/* =========================
+   APPLICATION
+========================= */
+
+.application {
+  padding: 100px 7%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #21170f,
+      #0b0908
+    );
+}
 
-    .button {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 16px 32px;
+.application-title {
+  max-width: 700px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
 
-      background: #c9a36a;
-      color: #100d0a;
+.application-title .eyebrow {
+  margin-bottom: 15px;
+}
 
-      text-decoration: none;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 2px;
+.application-title h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(42px,6vw,65px);
+  line-height: 1;
+  margin-bottom: 20px;
+}
 
-      transition: 0.25s ease;
-    }
+.application-title p {
+  color: #aaa095;
+}
 
-    .button:hover {
-      background: #e1c087;
-      transform: translateY(-2px);
-    }
+/* FORM */
 
-    /* =========================
-       PHOTO
-    ========================= */
+.application-form {
+  max-width: 750px;
+  margin: auto;
 
-    .photo-wrapper {
-      display: flex;
-      justify-content: center;
-    }
+  padding: 40px;
 
-    .photo {
-      width: 100%;
-      max-width: 450px;
+  background: #15110e;
+  border: 1px solid #49382a;
+}
 
-      padding: 8px;
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
 
-      border: 1px solid #c9a36a;
+.form-group {
+  margin-bottom: 22px;
+}
 
-      background: #120f0c;
+.form-group label {
+  display: block;
 
-      box-shadow:
-        0 25px 70px rgba(0, 0, 0, 0.6);
-    }
+  margin-bottom: 8px;
 
-    .photo img {
-      display: block;
+  color: #c9a36a;
 
-      width: 100%;
-      height: auto;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 
-      object-fit: contain;
-    }
-
-    /* =========================
-       FEATURES
-    ========================= */
-
-    .features {
-      padding: 90px 7%;
-      background: #15110e;
-
-      text-align: center;
-    }
-
-    .features h2 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 48px;
-      margin-bottom: 50px;
-    }
-
-    .gold {
-      color: #c9a36a;
-    }
-
-    .cards {
-      max-width: 1050px;
-      margin: auto;
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
 
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
+  padding: 15px;
 
-    .card {
-      padding: 38px 28px;
+  background: #0b0908;
+  color: #f1e8dc;
 
-      background: #1c1612;
+  border: 1px solid #49382a;
 
-      border: 1px solid #403128;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
 
-      text-align: left;
-    }
+  outline: none;
+}
 
-    .card-number {
-      color: #c9a36a;
-      font-size: 12px;
-      letter-spacing: 2px;
-    }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #c9a36a;
+}
 
-    .card h3 {
-      margin: 18px 0 12px;
+.form-group textarea {
+  resize: vertical;
+}
 
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 25px;
-    }
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #70675f;
+}
 
-    .card p {
-      color: #a99f95;
-      line-height: 1.7;
-      font-size: 15px;
-    }
+.submit-button {
+  width: 100%;
 
-    /* =========================
-       OPPORTUNITY
-    ========================= */
+  padding: 17px;
 
-    .opportunity {
-      padding: 100px 7%;
-      background: #0c0a09;
-      text-align: center;
-    }
+  background: #c9a36a;
+  color: #100d0a;
 
-    .opportunity h2 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
+  border: none;
 
-    .opportunity p {
-      max-width: 650px;
-      margin: auto;
+  font-weight: bold;
+  letter-spacing: 2px;
 
-      color: #a99f95;
-      line-height: 1.7;
-      font-size: 17px;
-    }
+  cursor: pointer;
+}
 
-    /* =========================
-       APPLY
-    ========================= */
+.submit-button:hover {
+  background: #e2c187;
+}
 
-    .apply {
-      padding: 100px 7%;
+.form-message {
+  display: none;
 
-      text-align: center;
+  margin-top: 25px;
+  padding: 20px;
 
-      background:
-        linear-gradient(
-          135deg,
-          #21170f,
-          #0b0908
-        );
-    }
+  border: 1px solid #c9a36a;
 
-    .apply h2 {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(42px, 6vw, 65px);
-      margin-bottom: 18px;
-    }
+  color: #c9a36a;
 
-    .apply p {
-      color: #aaa095;
-      font-size: 17px;
-    }
+  text-align: center;
+}
 
-    /* =========================
-       FOOTER
-    ========================= */
+/* =========================
+   FOOTER
+========================= */
 
-    footer {
-      padding: 28px;
+footer {
+  padding: 28px;
 
-      text-align: center;
+  text-align: center;
 
-      border-top: 1px solid #30251d;
+  border-top: 1px solid #30251d;
 
-      color: #766d65;
+  color: #766d65;
 
-      font-size: 10px;
-      letter-spacing: 3px;
-    }
+  font-size: 10px;
+  letter-spacing: 3px;
+}
 
-    /* =========================
-       MOBILE
-    ========================= */
+/* =========================
+   MOBILE
+========================= */
 
-    @media (max-width: 800px) {
+@media (max-width:800px) {
 
-      .hero {
-        padding: 60px 6%;
-      }
+  .hero {
+    padding: 55px 6%;
+  }
 
-      .container {
-        grid-template-columns: 1fr;
-        gap: 50px;
+  .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 
-        text-align: center;
-      }
+  .intro {
+    margin: auto;
+  }
 
-      .intro {
-        margin: auto;
-      }
+  .photo {
+    max-width: 390px;
+  }
 
-      .photo {
-        max-width: 390px;
-      }
+  .cards {
+    grid-template-columns: 1fr;
+  }
 
-      .cards {
-        grid-template-columns: 1fr;
-      }
+  .card {
+    text-align: center;
+  }
 
-      .card {
-        text-align: center;
-      }
+}
 
-    }
+@media (max-width:600px) {
 
-    @media (max-width: 500px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
 
-      .hero {
-        padding: 45px 6%;
-      }
+  .application-form {
+    padding: 25px 20px;
+  }
 
-      .logo {
-        font-size: 55px;
-      }
+  .section,
+  .application,
+  .opportunity {
+    padding: 75px 6%;
+  }
 
-      h1 {
-        font-size: 55px;
-      }
+}
 
-      .features,
-      .opportunity,
-      .apply {
-        padding: 75px 6%;
-      }
-
-      .features h2,
-      .opportunity h2 {
-        font-size: 38px;
-      }
-
-    }
-
-  </style>
+</style>
 </head>
 
 
 <body>
 
 
-  <!-- =========================
-       HERO
-  ========================= -->
+<!-- =========================
+     HERO
+========================= -->
 
-  <section class="hero">
+<section class="hero">
 
-    <div class="container">
+  <div class="container">
 
-      <div class="hero-content">
+    <div>
 
-        <div class="logo">
-          J
-        </div>
-
-        <div class="brand-name">
-          JUAN IGURTUA
-        </div>
-
-        <div class="eyebrow">
-          FINANCIAL SERVICES
-        </div>
-
-        <h1>
-          BUILD<br>
-          <span>YOUR FUTURE.</span>
-        </h1>
-
-        <p class="intro">
-          Explore an opportunity to build valuable skills,
-          grow professionally, and create a career around
-          your goals.
-        </p>
-
-        <a
-          href="#apply"
-          class="button">
-          APPLY NOW
-        </a>
-
+      <div class="logo">
+        J
       </div>
 
-
-      <div class="photo-wrapper">
-
-        <div class="photo">
-
-          <img
-            src="file_00000000ab40822f941b09cd53bde886.png"
-            alt="Juan Igurtua Financial Services"
-          >
-
-        </div>
-
+      <div class="brand">
+        JUAN IGURTUA
       </div>
+
+      <div class="eyebrow">
+        FINANCIAL SERVICES
+      </div>
+
+      <h1>
+        BUILD<br>
+        <span>YOUR FUTURE.</span>
+      </h1>
+
+      <p class="intro">
+        Explore an opportunity to build valuable skills,
+        grow professionally, and create a career around
+        your goals.
+      </p>
+
+      <!-- SAME PAGE -->
+      <a
+        href="#apply"
+        class="button">
+        APPLY NOW
+      </a>
 
     </div>
 
-  </section>
 
+    <div class="photo">
 
-
-  <!-- =========================
-       WHY JOIN
-  ========================= -->
-
-  <section class="features">
-
-    <h2>
-      WHY <span class="gold">JOIN?</span>
-    </h2>
-
-
-    <div class="cards">
-
-
-      <div class="card">
-
-        <div class="card-number">
-          01
-        </div>
-
-        <h3>
-          Growth
-        </h3>
-
-        <p>
-          Develop professional skills and work
-          toward your personal and career goals.
-        </p>
-
-      </div>
-
-
-
-      <div class="card">
-
-        <div class="card-number">
-          02
-        </div>
-
-        <h3>
-          Flexibility
-        </h3>
-
-        <p>
-          Build an opportunity around your
-          schedule and the life you want.
-        </p>
-
-      </div>
-
-
-
-      <div class="card">
-
-        <div class="card-number">
-          03
-        </div>
-
-        <h3>
-          Training
-        </h3>
-
-        <p>
-          Learn new skills while receiving
-          guidance and support along the way.
-        </p>
-
-      </div>
-
+      <!-- YOUR EXACT FILE NAME -->
+      <img
+        src="file_00000000ab40822f941b09cd53bde886.png"
+        alt="Juan Igurtua Financial Services"
+      >
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
 
-  <!-- =========================
-       OPPORTUNITY
-  ========================= -->
+<!-- =========================
+     WHY JOIN
+========================= -->
 
-  <section class="opportunity">
+<section class="section">
 
-    <h2>
-      YOUR NEXT <span class="gold">MOVE.</span>
-    </h2>
+  <h2>
+    WHY <span class="gold">JOIN?</span>
+  </h2>
 
-    <p>
-      Whether you're looking for a flexible opportunity
-      or want to develop a long-term career, start by
-      learning more about what's available.
-    </p>
+  <div class="cards">
 
-  </section>
+    <div class="card">
+
+      <div class="card-number">
+        01
+      </div>
+
+      <h3>
+        Growth
+      </h3>
+
+      <p>
+        Develop professional skills and work
+        toward your personal and career goals.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="card-number">
+        02
+      </div>
+
+      <h3>
+        Flexibility
+      </h3>
+
+      <p>
+        Build an opportunity around your schedule
+        and the life you want.
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="card-number">
+        03
+      </div>
+
+      <h3>
+        Training
+      </h3>
+
+      <p>
+        Learn new skills with training and
+        support along the way.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
 
 
 
-  <!-- =========================
-       APPLY
-  ========================= -->
+<!-- =========================
+     OPPORTUNITY
+========================= -->
 
-  <section
-    class="apply"
-    id="apply">
+<section class="opportunity">
+
+  <h2>
+    YOUR NEXT <span class="gold">MOVE.</span>
+  </h2>
+
+  <p>
+    Whether you're looking for a flexible opportunity
+    or want to develop a long-term career, start by
+    learning more about what's available.
+  </p>
+
+</section>
+
+
+
+<!-- =========================
+     APPLICATION
+     SAME PAGE
+========================= -->
+
+<section
+  class="application"
+  id="apply">
+
+  <div class="application-title">
+
+    <div class="eyebrow">
+      CAREER APPLICATION
+    </div>
 
     <h2>
       READY TO GET
@@ -536,30 +599,255 @@
     </h2>
 
     <p>
-      Take the first step and learn more about the opportunity.
+      Complete the application below and we'll
+      be in touch about the opportunity.
     </p>
 
-    <!-- CHANGE THIS EMAIL -->
-    <a
-      href="mailto:YOUR-EMAIL@example.com"
-      class="button">
-      APPLY TODAY
-    </a>
-
-  </section>
+  </div>
 
 
+  <!-- NETLIFY FORM -->
 
-  <!-- =========================
-       FOOTER
-  ========================= -->
+  <form
+    name="career-application"
+    method="POST"
+    data-netlify="true"
+    netlify-honeypot="bot-field"
+    class="application-form"
+    id="careerForm"
+  >
 
-  <footer>
+    <input
+      type="hidden"
+      name="form-name"
+      value="career-application"
+    >
 
-    JUAN IGURTUA • FINANCIAL SERVICES
+    <!-- Spam protection -->
+    <div style="display:none;">
+      <label>
+        Don't fill this out:
+        <input name="bot-field">
+      </label>
+    </div>
 
-  </footer>
+
+    <div class="form-row">
+
+      <div class="form-group">
+
+        <label for="firstName">
+          First Name
+        </label>
+
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          placeholder="First name"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="lastName">
+          Last Name
+        </label>
+
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          placeholder="Last name"
+          required
+        >
+
+      </div>
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="email">
+        Email
+      </label>
+
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="you@example.com"
+        required
+      >
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="phone">
+        Phone Number
+      </label>
+
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="(555) 555-5555"
+        required
+      >
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="interest">
+        I'm Interested In
+      </label>
+
+      <select
+        id="interest"
+        name="interest"
+        required
+      >
+
+        <option value="">
+          Select an option
+        </option>
+
+        <option value="Part Time">
+          Part-Time Opportunity
+        </option>
+
+        <option value="Full Time">
+          Full-Time Opportunity
+        </option>
+
+        <option value="More Information">
+          I'd Like More Information
+        </option>
+
+      </select>
+
+    </div>
+
+
+    <div class="form-group">
+
+      <label for="message">
+        Tell Us About Yourself
+      </label>
+
+      <textarea
+        id="message"
+        name="message"
+        rows="5"
+        placeholder="Tell us a little about yourself and why you're interested."
+        required
+      ></textarea>
+
+    </div>
+
+
+    <button
+      type="submit"
+      class="submit-button">
+      SUBMIT APPLICATION
+    </button>
+
+
+    <!-- Appears on the SAME PAGE -->
+    <div
+      class="form-message"
+      id="formMessage">
+
+      <strong>
+        APPLICATION SUBMITTED.
+      </strong>
+
+      <br><br>
+
+      Thank you for your interest.
+      We'll be in touch soon.
+
+    </div>
+
+  </form>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  JUAN IGURTUA • FINANCIAL SERVICES
+
+</footer>
+
+
+<script>
+
+const form = document.getElementById("careerForm");
+const message = document.getElementById("formMessage");
+
+form.addEventListener("submit", async function(event) {
+
+  event.preventDefault();
+
+  const formData = new FormData(form);
+
+  try {
+
+    const response = await fetch("/", {
+      method: "POST",
+      headers: {
+        "Content-Type":
+          "application/x-www-form-urlencoded"
+      },
+      body:
+        new URLSearchParams(formData).toString()
+    });
+
+    if (response.ok) {
+
+      form.reset();
+
+      message.style.display = "block";
+
+      message.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+
+    } else {
+
+      alert(
+        "There was a problem submitting your application. Please try again."
+      );
+
+    }
+
+  } catch (error) {
+
+    alert(
+      "There was a problem submitting your application. Please try again."
+    );
+
+  }
+
+});
+
+</script>
 
 
 </body>
-    </html>
+</html>
