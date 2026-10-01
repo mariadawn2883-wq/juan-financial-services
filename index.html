@@ -24,8 +24,6 @@ body {
   line-height: 1.6;
 }
 
-/* HERO */
-
 .hero {
   min-height: 100vh;
   padding: 60px 7%;
@@ -70,7 +68,7 @@ body {
 
 h1 {
   font-family: Georgia, serif;
-  font-size: clamp(55px,8vw,90px);
+  font-size: clamp(55px, 8vw, 90px);
   line-height: .9;
   letter-spacing: -3px;
   margin-bottom: 28px;
@@ -140,7 +138,7 @@ h1 span,
   max-width: 1050px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -177,7 +175,7 @@ h1 span,
 
 .opportunity h2 {
   font-family: Georgia, serif;
-  font-size: clamp(40px,6vw,60px);
+  font-size: clamp(40px, 6vw, 60px);
   margin-bottom: 20px;
 }
 
@@ -207,7 +205,7 @@ h1 span,
 
 .application-title h2 {
   font-family: Georgia, serif;
-  font-size: clamp(42px,6vw,65px);
+  font-size: clamp(42px, 6vw, 65px);
   line-height: 1;
   margin-bottom: 20px;
 }
@@ -316,7 +314,8 @@ footer {
 
 /* MOBILE */
 
-@media (max-width:800px) {
+@media (max-width: 800px) {
+
   .hero {
     padding: 55px 6%;
   }
@@ -343,7 +342,8 @@ footer {
   }
 }
 
-@media (max-width:600px) {
+@media (max-width: 600px) {
+
   .form-row {
     grid-template-columns: 1fr;
     gap: 0;
@@ -358,6 +358,10 @@ footer {
   .opportunity {
     padding: 75px 6%;
   }
+
+  h1 {
+    font-size: 58px;
+  }
 }
 </style>
 </head>
@@ -367,9 +371,11 @@ footer {
 <!-- HERO -->
 
 <section class="hero">
+
   <div class="container">
 
     <div>
+
       <div class="logo">J</div>
 
       <div class="brand">
@@ -394,17 +400,24 @@ footer {
       <a href="#apply" class="button">
         APPLY NOW
       </a>
+
     </div>
 
+    <!-- NEW IMAGE -->
+
     <div class="photo">
+
       <img
-        src="IMG_20261001_190125_879.jpg"
+        src="file_00000000422c81f5903bd45fe5ef4125.png"
         alt="Juan Igartua Financial Services"
       >
+
     </div>
 
   </div>
+
 </section>
+
 
 <!-- WHY JOIN -->
 
@@ -417,34 +430,62 @@ footer {
   <div class="cards">
 
     <div class="card">
-      <div class="card-number">01</div>
-      <h3>Growth</h3>
+
+      <div class="card-number">
+        01
+      </div>
+
+      <h3>
+        Growth
+      </h3>
+
       <p>
         Develop professional skills and work
         toward your personal and career goals.
       </p>
+
     </div>
 
+
     <div class="card">
-      <div class="card-number">02</div>
-      <h3>Flexibility</h3>
+
+      <div class="card-number">
+        02
+      </div>
+
+      <h3>
+        Flexibility
+      </h3>
+
       <p>
         Build an opportunity around your schedule
         and the life you want.
       </p>
+
     </div>
 
+
     <div class="card">
-      <div class="card-number">03</div>
-      <h3>Training</h3>
+
+      <div class="card-number">
+        03
+      </div>
+
+      <h3>
+        Training
+      </h3>
+
       <p>
         Learn new skills with training and
         support along the way.
       </p>
+
     </div>
 
   </div>
+
 </section>
+
 
 <!-- OPPORTUNITY -->
 
@@ -461,6 +502,7 @@ footer {
   </p>
 
 </section>
+
 
 <!-- APPLICATION -->
 
@@ -484,6 +526,7 @@ footer {
 
   </div>
 
+
   <!-- NETLIFY FORM -->
 
   <form
@@ -501,8 +544,6 @@ footer {
       value="career-application"
     >
 
-    <!-- SPAM PROTECTION -->
-
     <p hidden>
       <label>
         Don't fill this out:
@@ -510,10 +551,15 @@ footer {
       </label>
     </p>
 
+
     <div class="form-row">
 
       <div class="form-group">
-        <label for="firstName">First Name</label>
+
+        <label for="firstName">
+          First Name
+        </label>
+
         <input
           type="text"
           id="firstName"
@@ -522,10 +568,16 @@ footer {
           autocomplete="given-name"
           required
         >
+
       </div>
 
+
       <div class="form-group">
-        <label for="lastName">Last Name</label>
+
+        <label for="lastName">
+          Last Name
+        </label>
+
         <input
           type="text"
           id="lastName"
@@ -534,12 +586,18 @@ footer {
           autocomplete="family-name"
           required
         >
+
       </div>
 
     </div>
 
+
     <div class="form-group">
-      <label for="email">Email</label>
+
+      <label for="email">
+        Email
+      </label>
+
       <input
         type="email"
         id="email"
@@ -548,10 +606,16 @@ footer {
         autocomplete="email"
         required
       >
+
     </div>
 
+
     <div class="form-group">
-      <label for="phone">Phone Number</label>
+
+      <label for="phone">
+        Phone Number
+      </label>
+
       <input
         type="tel"
         id="phone"
@@ -560,12 +624,22 @@ footer {
         autocomplete="tel"
         required
       >
+
     </div>
 
-    <div class="form-group">
-      <label for="interest">I'm Interested In</label>
 
-      <select id="interest" name="interest" required>
+    <div class="form-group">
+
+      <label for="interest">
+        I'm Interested In
+      </label>
+
+      <select
+        id="interest"
+        name="interest"
+        required
+      >
+
         <option value="" selected disabled>
           Select an option
         </option>
@@ -581,11 +655,17 @@ footer {
         <option value="More Information">
           I'd Like More Information
         </option>
+
       </select>
+
     </div>
 
+
     <div class="form-group">
-      <label for="message">Tell Us About Yourself</label>
+
+      <label for="message">
+        Tell Us About Yourself
+      </label>
 
       <textarea
         id="message"
@@ -594,7 +674,9 @@ footer {
         placeholder="Tell us a little about yourself and why you're interested."
         required
       ></textarea>
+
     </div>
+
 
     <button
       type="submit"
@@ -604,21 +686,29 @@ footer {
       SUBMIT APPLICATION
     </button>
 
+
     <div
       class="form-message"
       id="formMessage"
       role="status"
       aria-live="polite"
     >
-      <strong>APPLICATION SUBMITTED.</strong>
+
+      <strong>
+        APPLICATION SUBMITTED.
+      </strong>
+
       <br><br>
+
       Thank you for your interest.
       We'll be in touch soon.
+
     </div>
 
   </form>
 
 </section>
+
 
 <!-- FOOTER -->
 
@@ -626,7 +716,9 @@ footer {
   JUAN IGARTUA • FINANCIAL SERVICES
 </footer>
 
+
 <script>
+
 const form = document.getElementById("careerForm");
 const message = document.getElementById("formMessage");
 const submitButton = document.getElementById("submitButton");
@@ -643,11 +735,16 @@ form.addEventListener("submit", async function(event) {
   try {
 
     const response = await fetch("/", {
+
       method: "POST",
+
       headers: {
-        "Content-Type": "application/x-www-form-urlencoded"
+        "Content-Type":
+          "application/x-www-form-urlencoded"
       },
+
       body: new URLSearchParams(formData).toString()
+
     });
 
     if (!response.ok) {
@@ -663,7 +760,8 @@ form.addEventListener("submit", async function(event) {
       block: "center"
     });
 
-    submitButton.textContent = "APPLICATION SUBMITTED";
+    submitButton.textContent =
+      "APPLICATION SUBMITTED";
 
   } catch (error) {
 
@@ -674,11 +772,14 @@ form.addEventListener("submit", async function(event) {
     );
 
     submitButton.disabled = false;
-    submitButton.textContent = "SUBMIT APPLICATION";
+
+    submitButton.textContent =
+      "SUBMIT APPLICATION";
 
   }
 
 });
+
 </script>
 
 </body>
